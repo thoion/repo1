@@ -4,23 +4,16 @@
 
 int main() {
     int a[1000];
-    int i, sum = 0;
-    
+    int i, sum = 0;    
     srand(time(NULL));
-    
-    // Заполнение массива
     for (i = 0; i < 1000; i++) {
         a[i] = rand() % 56 - 5;
     }
-    
-    // Сумма с конца до первого отрицательного (while)
     i = 999;
     while (i >= 0 && a[i] >= 0) {
         sum += a[i];
         i--;
-    }
-    
+    }    
     printf("Сумма (while): %d\n", sum);
-    
     return 0;
 }
