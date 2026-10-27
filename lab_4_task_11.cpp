@@ -1,4 +1,4 @@
-=#include <cstdio>
+#include <cstdio>
 #include <time.h>
 #include <stdlib.h>
 int main() {
