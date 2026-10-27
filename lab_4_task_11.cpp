@@ -1,4 +1,4 @@
-#include <cstdio>
+=#include <cstdio>
 #include <time.h>
 #include <stdlib.h>
 int main() {
@@ -12,6 +12,20 @@ int main() {
         printf("%d\n", a[i]);
         sum += a[i];
     }
-    printf("Сумма элементов с конца до первого отрицательного: %d\n", sum);
+    printf("Сумма (for) элементов с конца до первого отрицательного: %d\n", sum);
+    sum = 0;
+    i = 999;
+    while (i >= 0 && a[i] >= 0) {
+        sum += a[i];
+        i--;
+    }
+    printf("Сумма (while): %d\n", sum);
+    sum = 0;
+    i = 999;
+    do {
+        sum += a[i];
+        i--;
+    } while (i >= 0 && a[i]>=0);
+    printf("Сумма (do-while): %d\n", sum);
     return 0;
 }
