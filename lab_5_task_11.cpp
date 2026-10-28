@@ -31,9 +31,14 @@ int main() {
         }
     }
     printf("Числа после обработки: %d\n", counter );
-    do {
-        for
-
+    for (int i = 0; i<x; i++){
+        for (int j=i+1; j<x; j++){
+            printf("%d", j);
+            if (arr3[j]<arr3[i]){
+                arr3[j]=arr3[i];
+                }
+        }
+        printf("%d\n", i);
     }
     return 0;
 }
