@@ -40,4 +40,5 @@ int main() {
         sum = 0;
     }
     printf("Сумма (do-while): %d\n", sum);
-    return
+    return 0;
+}
