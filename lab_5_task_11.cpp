@@ -7,7 +7,9 @@ int main() {
     float arr[n];
     int arr2[n];
     float arr3[n];
+    float arr4[n];
     int x;
+    int counter = 0;
     printf("Введите размер массива до 100:\n");
     scanf("%d", &x);
     while ( 100 < x || x < 1) {
@@ -24,8 +26,14 @@ int main() {
     for (int i = 0; i < x; i++){
         if (arr2[i]%2==0){
             arr3[i]=arr[i];
-            printf("%f\n", arr3[i]);           
+            printf("%f\n", arr3[i]);
+            counter += 1;           
         }
+    }
+    printf("Числа после обработки: %d\n", counter );
+    do {
+        for
+
     }
     return 0;
 }
