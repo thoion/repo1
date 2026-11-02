@@ -3,46 +3,38 @@
 #include <stdlib.h>
 int main() {
     unsigned long long K;
-    printf("Введите целое положительное число K (K <= 1e9): \n");
+    printf("Введите целое положительное число K (1 <= K <= 1e9): \n");
     scanf("%lld", &K);
-    while (K <= 0 || K > 1e9) {
+    while (K <= 1 || K > 1e9) {
         printf("Неверно введено число, повторите попытку: ");
         scanf("%lld", &K);
     }
-    int K1 = K;
-    int kch;
-    for (kch=0;K1>0;kch++){
-        K1 /= 10;
-    }
+    int K_for = K;
+    int K_while = K;
+    int K_do_while = K;
     int sum = 0;
-    int K2=K;
-    for (int i=0; kch>0; i++){
-        if (K2%2==0){
-            sum += K2%10;
+    for (int i=0; K_for>0; i++){
+        if (K_for%2==0){
+            sum += K_for%10;
         }
-        K2 /= 10;
-        kch = kch - 1;
+        K_for /= 10;
     }
     printf("Сумма четных цифр (for): %d\n", sum);
     sum = 0;
-    int K3 = K;
-    while (K3>0){
-        if (K3%2==0){
-                sum += K3%10;
+    while (K_while>0){
+        if (K_while%2==0){
+                sum += K_while%10;
         }
-        K3 /= 10;
+        K_while /= 10;
     }
     printf("Сумма четных цифр (while): %d\n", sum);
-    int K4 = K;
     sum = 0;
-    if (K%2==0){
-        do { 
-            if (K4%2==0){
-                sum += K4%10;
-            }
-            K4 /= 10;
-        } while(K4>0);
-    }
+    do { 
+        if (K_do_while%2==0){
+            sum += K_do_while%10;
+        }
+        K_do_while /= 10;
+    } while(K_do_while>0);
     printf("Сумма четных цифр (do-while): %d", sum);
     return 0;
 }
